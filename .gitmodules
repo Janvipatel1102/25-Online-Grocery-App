@@ -1,0 +1,6 @@
+[submodule "TiwariMartAdminMain"]
+	path = TiwariMartAdminMain
+	url = https://github.com/savage-9/Tiwari-Mart-Admin.git
+[submodule "TiwariMartMain"]
+	path = TiwariMartMain
+	url = https://github.com/savage-9/Tiwari-Mart.git
