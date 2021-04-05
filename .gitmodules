@@ -4,3 +4,9 @@
 [submodule "TiwariMartMain"]
 	path = TiwariMartMain
 	url = https://github.com/savage-9/Tiwari-Mart.git
+[submodule "Project Work/TiwariMart"]
+	path = Project Work/TiwariMart
+	url = https://github.com/savage-9/Tiwari-Mart.git
+[submodule "Project Work/TiwariMartAdmin"]
+	path = Project Work/TiwariMartAdmin
+	url = https://github.com/savage-9/Tiwari-Mart-Admin.git
