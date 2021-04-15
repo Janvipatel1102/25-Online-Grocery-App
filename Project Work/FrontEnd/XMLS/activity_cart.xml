@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".cart">
+
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/cart_list"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:clipToPadding="false"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintBottom_toTopOf="@id/checkout"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:ignore="MissingConstraints"
+      tools:listitem="@layout/cart_items"
+      >
+
+  </androidx.recyclerview.widget.RecyclerView>
+
+
+
+  <LinearLayout
+      android:id="@+id/checkout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="#FFC554"
+      android:orientation="horizontal"
+      app:layout_constraintBottom_toTopOf="@id/bottom_navigation_view_linear"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      tools:ignore="MissingConstraints">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1">
+
+      <TextView
+          android:id="@+id/totalExpenseText"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:letterSpacing="0.01"
+          android:lineSpacingExtra="6sp"
+          android:text="Total: "
+          android:textAppearance="@style/totalExpense"
+          android:textStyle="bold" />
+
+      <TextView
+          android:id="@+id/totalExpense"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:letterSpacing="0.01"
+          android:lineSpacingExtra="6sp"
+          android:text="Rs 9,999"
+          android:textAppearance="@style/totalExpense"
+          android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:layout_gravity="center">
+
+      <TextView
+          android:id="@+id/savedText"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Saved: "
+          android:textAppearance="@style/saved_90"
+          android:textStyle="bold"
+          android:letterSpacing="0.01"
+          android:lineSpacingExtra="6sp"
+          />
+      <TextView
+          android:id="@+id/saved"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Rs 90"
+          android:textAppearance="@style/saved_90"
+          android:textStyle="bold"
+          android:letterSpacing="0.01"
+          android:lineSpacingExtra="6sp"
+          />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/proceed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:backgroundTint="#0B6F3A"
+        android:insetBottom="0dp"
+        android:insetTop="0dp"
+        android:paddingBottom="0dp"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:paddingTop="0dp"
+        android:text="Proceed"
+        android:textAllCaps="false"
+        android:textAppearance="@style/proceed"
+        android:textStyle="bold"
+        app:cornerRadius="0dp" />
+  </LinearLayout>
+
+
+  <com.gauravk.bubblenavigation.BubbleNavigationLinearView
+      android:id="@+id/bottom_navigation_view_linear"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/white"
+      android:elevation="8dp"
+      android:padding="10dp"
+      android:orientation="horizontal"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      >
+
+    <com.gauravk.bubblenavigation.BubbleToggleView
+        android:id="@+id/cartItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:bt_active="true"
+        app:bt_colorActive="@color/activeColor"
+        app:bt_colorInactive="@color/inactiveColor"
+        app:bt_icon="@drawable/cart"
+        app:bt_shape="@drawable/transition_background_drawable_cart"
+        app:bt_title="@string/cart"
+        android:layout_weight="1"/>
+
+    <com.gauravk.bubblenavigation.BubbleToggleView
+        android:id="@+id/orderItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:bt_badgeBackgroundColor="@color/inactiveColor"
+        app:bt_colorActive="@color/activeColor"
+        app:bt_colorInactive="@color/inactiveColor"
+        app:bt_icon="@drawable/order"
+        app:bt_shape="@drawable/transition_background_drawable_order"
+        android:layout_weight="1"
+        app:bt_title="@string/order" />
+
+    <com.gauravk.bubblenavigation.BubbleToggleView
+        android:id="@+id/searchItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:bt_colorActive="@color/activeColor"
+        app:bt_colorInactive="@color/inactiveColor"
+        app:bt_icon="@drawable/explore"
+        app:bt_shape="@drawable/transition_background_drawable_explore"
+        app:bt_title="@string/explore"
+        android:layout_weight="1"/>
+
+
+    <com.gauravk.bubblenavigation.BubbleToggleView
+        android:id="@+id/profileItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:bt_shape="@drawable/transition_background_drawable_person"
+        app:bt_title="@string/profile"
+        app:bt_colorActive="@color/activeColor"
+        app:bt_colorInactive="@color/inactiveColor"
+        app:bt_icon="@drawable/profile"
+        android:layout_weight="1"/>
+  </com.gauravk.bubblenavigation.BubbleNavigationLinearView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
