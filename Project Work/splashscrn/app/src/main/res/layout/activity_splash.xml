@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".splash">
+
+</androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".splash"
+    android:background="#0B6F3A">
+
+    <RelativeLayout
+
+        android:layout_width="257.06dp"
+        android:layout_height="68.61dp"
+        tools:context=".splash"
+        android:layout_marginTop="352dp"
+        android:layout_marginLeft="78dp"
+        >
+
+        <ImageView
+            android:layout_width="54.7dp"
+            android:layout_height="63.61dp"
+            android:src="@drawable/Group"
+            android:id="@+id/image"
+            android:layout_toRightOf="@id/image"
+            android:layout_alignParentTop="true"/>
+
+        <TextView
+            android:layout_width="171dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tiwari_mart"
+            android:layout_toRightOf="@id/image"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20.01dp"
+            android:layout_marginTop="0dp"
+            android:fontFamily="@font/roboto"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="0dp"
+            android:text="Tiwari Mart"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="31.94dp"
+            android:layout_marginTop="12.3dp"
+            android:layout_toRightOf="@id/image"
+            android:text="@string/online_groceries"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:fontFamily="@font/roboto" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>
+
