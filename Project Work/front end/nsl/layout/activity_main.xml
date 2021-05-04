@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FCFCFC"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/Effect_image"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/upperrect"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+
+        <TextView
+            android:id="@+id/Enter_mobile_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_black"
+            android:gravity="center"
+            android:text="Enter your Mobile Number"
+            android:textColor="#30333B"
+            android:textSize="26sp"
+            app:lineHeight="29sp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/Mobile_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="Mobile Number"
+            android:textColor="#828282"
+            tools:ignore="MissingConstraints" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linearlayout"
+        app:layout_constraintTop_toBottomOf="@id/Effect_image">
+
+        <TextView
+            android:id="@+id/country_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/roboto"
+            android:text="+91"
+            android:textColor="#333333"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/Phone_number_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:ems="10"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:padding="10dp"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/ellipse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/ellipse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearlayout"
+        tools:ignore="MissingConstraints">
+
+        <ImageButton
+            android:id="@+id/Forward_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="#0B6F3A"
+            app:srcCompat="@drawable/forwardbutton" />
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
