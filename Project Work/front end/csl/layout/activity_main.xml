@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FCFCFC"
+    android:orientation="vertical"
+    tools:context="com.cs.vsl.MainActivity">
+
+
+
+
+    <LinearLayout
+        android:id="@+id/Effect_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/upperrect"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+
+        <TextView
+            android:id="@+id/Enter_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_black"
+            android:gravity="center"
+            android:text="Enter 4 digit Code"
+            android:textColor="#30333B"
+            android:textSize="26sp"
+            app:lineHeight="29sp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/Code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/code"
+            android:textColor="#828282"
+            tools:ignore="MissingConstraints" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/Input_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:padding="10dp"
+        android:textSize="20sp"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/Ellipse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/ellipse"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageButton
+                android:id="@+id/Forward_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#0B6F3A"
+                android:layout_centerInParent="true"
+                app:srcCompat="@drawable/forwardbutton" />
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/Resend_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="24dp"
+            android:background="#FCFCFC"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/resendcode" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
