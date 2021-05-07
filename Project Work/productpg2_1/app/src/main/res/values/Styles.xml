@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="product_name">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">#30333B</item>
+
+    </style>
+    <style name="sold_by_mer">
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing" tools:targetApi="lollipop">0.01</item>
+        <item name="android:textColor">#828282</item>
+    </style>
+
+    <style name="save_for_la">
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing" tools:targetApi="lollipop">0.01</item>
+        <item name="android:textColor">#0B6F3A</item>
+    </style>
+
+
+
+</resources>
