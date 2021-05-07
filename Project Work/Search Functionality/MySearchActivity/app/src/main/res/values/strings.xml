@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">My Search Activity</string>
+    <string name="search_title">Search Product</string>
+    <string name="search_hint">Search Here</string>
+
+    <string name="product_name">Product name 123 eslue qku</string>
+    <string name="some_id">1,200</string>
+    <string name="expense2">Rs 400</string>
+    <string name="expense1">Rs <strike>400</strike></string>
+    <string name="profile_bottomnavigation">Profile</string>
+    <string name="cart_bottomnavigation">Cart</string>
+    <string name="order_bottomnavigation">Orders</string>
+    <string name="explore_bottomnavigation">Profile</string>
+
+    <string name="explore">Explore</string>
+    <string name="profile">Profile</string>
+    <string name="order">Orders</string>
+    <string name="cart">Cart</string>
+
+
+</resources>
