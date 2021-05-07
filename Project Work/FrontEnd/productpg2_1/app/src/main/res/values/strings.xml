@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">productpg2_1</string>
+    <string name="product_name">Product Name</string>
+    <string name="some_id">(268)</string>
+    <string name="merchant_name">Sold by :<b>Merchant name</b> </string>
+    <string name="_20_pc">$20 / pc</string>
+    <string name="in_stock">In Stock</string>
+    <string name="_10_delivery_april_1_5">$10 Delivery: April 1-5</string>
+    <string name="buynow">Buy Now</string>
+    <string name="addtocart">Add to Cart</string>
+    <string name="save_for_later">Save for later</string>
+    <string name="description">Description</string>
+    <string name="Loremipsum">Lorem Ipsum Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum</string>
+    <string name="similar_items">Similar Items</string>
+</resources>
