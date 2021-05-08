@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.savage9ishere.tiwarimartadmin.orders.particular_order.ParticularOrderViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".checkout.final_bill.FinalBillFragment">
+
+
+
+
+            <TextView
+                android:id="@+id/items_hard_coded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Items"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/dark_grey"
+                style="@style/order_details_hardcoded"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/linearlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/items_hard_coded"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/order_details_background">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/items_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp" />
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/auth_details_hardcoded"
+                style="@style/order_details_hardcoded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearlayout"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:text="Author Details"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/dark_grey" />
+
+
+            <LinearLayout
+                android:id="@+id/auth_details_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/auth_details_hardcoded"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/order_details_background"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:text="@{@string/item_auth_phone_format(viewModel.authPhone)}"
+                    android:layout_margin="8dp"
+                    android:id="@+id/auth_phone_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+
+
+            <TextView
+                android:id="@+id/delivery_details_text_hardcoded"
+                style="@style/order_details_hardcoded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/auth_details_layout"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:text="Delivery Details"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/dark_grey" />
+
+            <LinearLayout
+                android:id="@+id/delivery_details_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/delivery_details_text_hardcoded"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/order_details_background"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:text="@{@string/item_order_placed_time_format(viewModel.orderPlacedTime)}"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="8dp"
+                    style="@style/order_details"
+
+                    android:layout_below="@id/auth_phone_text"
+                    android:id="@+id/order_placed_time_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+                <TextView
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:text="@{@string/item_order_status_format(viewModel.status)}"
+                    android:layout_below="@+id/order_placed_time_text"
+                    android:id="@+id/status_text_view"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    style="@style/order_details"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/delivery_time_text_view"
+                    style="@style/order_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@{@string/item_delivery_time_format(viewModel.deliveryTime)}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    />
+
+                <TextView
+                    android:id="@+id/delivery_instructions_text_View"
+                    style="@style/order_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="@{@string/item_delivery_instructions_format(viewModel.deliveryInstructions)}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    />
+
+            </LinearLayout>
+
+
+
+
+            <TextView
+                android:id="@+id/shipping_address_text_hardcoded"
+                style="@style/order_details_hardcoded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/delivery_details_layout"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:text="Shipping Address"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/dark_grey" />
+
+
+
+            <LinearLayout
+                android:id="@+id/shipping_address_text_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shipping_address_text_hardcoded"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/order_details_background"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/shipping_address_text"
+                    style="@style/order_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="@{@string/item_address_format(viewModel.itemAddress)}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    />
+
+
+            </LinearLayout>
+
+
+
+
+
+            <TextView
+                android:id="@+id/order_summary_hardcoded"
+                style="@style/order_details_hardcoded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shipping_address_text_layout"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:text="Order Summary"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/dark_grey" />
+
+
+
+
+            <LinearLayout
+                android:id="@+id/order_summary_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/order_summary_hardcoded"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/order_details_background"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/bill_amount_text_view"
+                    style="@style/order_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="@{@string/item_bill_amount_format(viewModel.billAmountTotal, viewModel.deliveryCharge, viewModel.billAmountWithDeliveryCharge)}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    />
+
+                <TextView
+                    android:id="@+id/save_amount_text_view"
+                    style="@style/order_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="@{@string/item_save_amount_format(viewModel.totalSavings)}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    />
+
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/payment_information_hardcoded"
+                style="@style/order_details_hardcoded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/order_summary_layout"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:text="Payment Information"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/dark_grey" />
+
+            <LinearLayout
+                android:id="@+id/payment_information_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/payment_information_hardcoded"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/order_details_background"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/payment_method_text_view"
+                    style="@style/order_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="@{@string/item_payment_method_format(viewModel.paymentMethodd)}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    />
+
+
+            </LinearLayout>
+
+
+
+            <Button
+                android:id="@+id/order_on_way_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/payment_information_layout"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="@color/yellow"
+                android:text="Order on way"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/order_delivered_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/order_on_way_button"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/yellow"
+                android:text="Order delivered"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/order_cancelled_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/order_delivered_button"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="@color/yellow"
+                android:text="Order cancelled"
+                android:textAllCaps="false" />
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>
