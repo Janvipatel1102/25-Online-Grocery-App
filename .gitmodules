@@ -16,3 +16,6 @@
 [submodule "Project Work/QuikcartAdmin"]
 	path = Project Work/QuikcartAdmin
 	url = https://github.com/savage-9/Quickcart-Admin.git
+[submodule "Project Work/Customer Support/Final_Version/Customer-Support"]
+	path = Project Work/Customer Support/Final_Version/Customer-Support
+	url = https://github.com/Roh15/Customer-Support.git
