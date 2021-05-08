@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".categories.particular_category.new_item_details.NewItemDetailsFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_above="@+id/proceed_to_add_item_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_margin = "8dp"
+                    android:scrollbars="horizontal"
+                    android:id="@+id/recycler_view_item_photos"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"/>
+
+                <Button
+                    android:id="@+id/add_photo_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/recycler_view_item_photos"
+                    android:layout_centerHorizontal="true"
+                    android:backgroundTint="#FFC554"
+                    android:text="+Add Photo"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_layout_1"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/add_photo_button"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:hint="Item Name"
+                    app:hintTextColor="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/item_name_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:autofillHints=""
+                        android:background="@color/light_grey"
+                        android:inputType="text"
+                        android:textAllCaps="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_layout_5"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_input_layout_1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:hint="Item Size"
+                    app:hintTextColor="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/item_size_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:autofillHints=""
+                        android:background="@color/light_grey"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_layout_1"
+                    android:layout_below="@id/text_input_layout_5"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/text_input_layout_2"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:hint="Item Price"
+                        app:hintTextColor="@color/black">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/item_price_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:autofillHints=""
+                            android:background="@color/light_grey"
+                            android:inputType="numberDecimal" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/text_input_layout_3"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:hint="Discount%"
+                        app:hintTextColor="@color/black">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/item_discount_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:autofillHints=""
+                            android:background="@color/light_grey"
+                            android:inputType="numberDecimal" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_layout_4"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linear_layout_1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:hint="Item Description"
+                    app:hintTextColor="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:autofillHints=""
+                        android:lines="5"
+                        android:background="@color/light_grey"
+                        android:inputType="textMultiLine" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll"
+                    android:layout_below="@id/text_input_layout_4"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/text_input_layout_6"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:hint="Delivery Duration"
+                        app:hintTextColor="@color/black">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:autofillHints=""
+                            android:background="@color/light_grey"
+                            android:inputType="number" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Spinner
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:id="@+id/time_unit_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/stock_availability_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:backgroundTint="@color/yellow"
+                    android:text="Change to Not in Stock"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+                <RelativeLayout
+                    android:id="@+id/linear_layout_2"
+                    android:layout_marginStart="8dp"
+                    android:layout_below="@+id/stock_availability_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:text="Available Sizes"
+                        android:layout_width="wrap_content"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:layout_height="wrap_content"/>
+
+                    <ImageView
+                        android:id="@+id/add_new_size_image"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/ic_add" />
+
+                </RelativeLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_layout_7"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linear_layout_2"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:hint="New Size"
+                    android:visibility="gone"
+                    app:hintTextColor="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/new_size_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/light_grey" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_layout_8"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_input_layout_7"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:hint="New Price"
+                    android:visibility="gone"
+                    app:hintTextColor="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/new_price_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/light_grey"
+                        android:inputType="number" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/add_new_size_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_input_layout_8"
+                    android:layout_marginStart="8dp"
+                    android:backgroundTint="#FFC554"
+                    android:text="+Add"
+                    android:visibility="gone" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:visibility="gone"
+                    android:layout_margin="8dp"
+                    android:layout_below="@+id/add_new_size_button"
+                    android:id="@+id/new_sizes_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+        <Button
+            android:id="@+id/proceed_to_add_item_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/dark_green"
+            android:text="Proceed To Add Item"
+            android:textAllCaps="false" />
+
+    </RelativeLayout>
+
+
+</layout>
