@@ -10,3 +10,9 @@
 [submodule "Project Work/TiwariMartAdmin"]
 	path = Project Work/TiwariMartAdmin
 	url = https://github.com/savage-9/Tiwari-Mart-Admin.git
+[submodule "Project Work/Quikcart"]
+	path = Project Work/Quikcart
+	url = https://github.com/savage-9/Quikcart.git
+[submodule "Project Work/QuikcartAdmin"]
+	path = Project Work/QuikcartAdmin
+	url = https://github.com/savage-9/Quickcart-Admin.git
